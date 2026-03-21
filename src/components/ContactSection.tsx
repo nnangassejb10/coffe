@@ -13,7 +13,7 @@ const ContactSection = () => {
     setSending(true);
     setTimeout(() => {
       setSending(false);
-      toast.success('Message sent! We'll get back to you soon.');
+      toast.success("Message sent! We'll get back to you soon.");
       (e.target as HTMLFormElement).reset();
     }, 1200);
   };
