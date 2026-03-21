@@ -1,9 +1,10 @@
 import { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
 
 const CoffeeCup = () => {
   const ref = useRef<THREE.Group>(null);
+  const texture = useLoader(THREE.TextureLoader, '/images/coffe-removebg-preview.png');
 
   useFrame((state) => {
     if (!ref.current) return;
@@ -12,28 +13,16 @@ const CoffeeCup = () => {
   });
 
   return (
-    <group ref={ref} position={[0, -0.5, 0]}>
-      {/* Cup body - cylinder */}
-      <mesh castShadow>
-        <cylinderGeometry args={[0.9, 0.7, 1.6, 32]} />
-        <meshStandardMaterial color="#f5f0e8" roughness={0.3} metalness={0.05} />
+    <group ref={ref} position={[0, -0.2, 0]}>
+      <mesh>
+        <planeGeometry args={[2.2, 2.2]} />
+        <meshStandardMaterial
+          map={texture}
+          transparent
+          opacity={1}
+          side={THREE.DoubleSide}
+        />
       </mesh>
-      {/* Coffee inside */}
-      <mesh position={[0, 0.7, 0]}>
-        <cylinderGeometry args={[0.85, 0.85, 0.15, 32]} />
-        <meshStandardMaterial color="#3d1c02" roughness={0.1} metalness={0.3} />
-      </mesh>
-      {/* Handle */}
-      <mesh position={[1.05, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
-        <torusGeometry args={[0.35, 0.08, 8, 16, Math.PI]} />
-        <meshStandardMaterial color="#f5f0e8" roughness={0.3} metalness={0.05} />
-      </mesh>
-      {/* Saucer */}
-      <mesh position={[0, -0.9, 0]} castShadow>
-        <cylinderGeometry args={[1.3, 1.3, 0.1, 32]} />
-        <meshStandardMaterial color="#f5f0e8" roughness={0.3} metalness={0.05} />
-      </mesh>
-      {/* Steam particles */}
       <Steam />
     </group>
   );

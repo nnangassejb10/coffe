@@ -9,6 +9,7 @@ const drinks = [
     price: '$5.90',
     tag: 'Best Seller',
     color: 'from-amber-900/40 to-amber-700/20',
+    img: '/images/coffe-removebg-preview.png',
   },
   {
     name: 'Caramel Cloud Frappe',
@@ -16,6 +17,7 @@ const drinks = [
     price: '$6.50',
     tag: 'New',
     color: 'from-orange-900/40 to-yellow-800/20',
+    img: '/images/frappe-removebg-preview.png',
   },
   {
     name: 'Mocha Midnight Swirl',
@@ -23,6 +25,7 @@ const drinks = [
     price: '$6.20',
     tag: 'Popular',
     color: 'from-stone-900/60 to-stone-700/20',
+    img: '/images/coffe-removebg-preview.png',
   },
   {
     name: 'Vanilla Cold Brew',
@@ -30,6 +33,7 @@ const drinks = [
     price: '$5.50',
     tag: null,
     color: 'from-yellow-900/30 to-amber-800/10',
+    img: '/images/coffe-removebg-preview.png',
   },
   {
     name: 'Matcha Forest Latte',
@@ -37,6 +41,7 @@ const drinks = [
     price: '$6.00',
     tag: 'Seasonal',
     color: 'from-emerald-900/40 to-green-800/20',
+    img: '/images/coffe-removebg-preview.png',
   },
   {
     name: 'Espresso Tonic',
@@ -44,6 +49,7 @@ const drinks = [
     price: '$5.70',
     tag: null,
     color: 'from-zinc-900/50 to-zinc-700/20',
+    img: '/images/coffe-removebg-preview.png',
   },
 ];
 
@@ -54,6 +60,8 @@ const MenuSection = () => {
   return (
     <section id="menu" className="relative py-32 px-6">
       <div className="container mx-auto max-w-6xl" ref={ref}>
+        
+        {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -71,6 +79,7 @@ const MenuSection = () => {
           </p>
         </motion.div>
 
+        {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {drinks.map((drink, i) => (
             <motion.div
@@ -84,34 +93,64 @@ const MenuSection = () => {
               }}
               className="group relative bg-card rounded-xl border border-border overflow-hidden hover:border-primary/40 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5"
             >
-              {/* Abstract gradient background */}
-              <div className={`h-44 bg-gradient-to-br ${drink.color} flex items-center justify-center relative overflow-hidden`}>
-                <div className="w-20 h-20 rounded-full bg-foreground/5 group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute w-32 h-32 rounded-full bg-foreground/3 -top-8 -right-8 group-hover:translate-x-2 transition-transform duration-700" />
+
+              {/* IMAGE + GRADIENT */}
+              <div className={`h-44 relative overflow-hidden`}>
+                
+                {/* IMAGE */}
+                {drink.img && (
+                  <img
+                    src={drink.img}
+                    alt={drink.name}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                )}
+
+                {/* OVERLAY GRADIENT (garde ton style) */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${drink.color}`} />
+
+                {/* EFFETS DESIGN */}
+                <div className="relative z-10 flex items-center justify-center h-full">
+                  <div className="w-20 h-20 rounded-full bg-foreground/5 group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute w-32 h-32 rounded-full bg-foreground/3 -top-8 -right-8 group-hover:translate-x-2 transition-transform duration-700" />
+                </div>
+
+                {/* TAG */}
                 {drink.tag && (
-                  <span className="absolute top-3 right-3 bg-primary/90 text-primary-foreground text-xs font-bold px-2.5 py-1 rounded-full">
+                  <span className="absolute top-3 right-3 z-20 bg-primary/90 text-primary-foreground text-xs font-bold px-2.5 py-1 rounded-full">
                     {drink.tag}
                   </span>
                 )}
               </div>
 
+              {/* CONTENT */}
               <div className="p-5">
                 <div className="flex items-start justify-between mb-2">
-                  <h3 className="font-display text-lg font-semibold leading-tight">{drink.name}</h3>
-                  <span className="text-primary font-bold font-body text-lg ml-2 shrink-0">{drink.price}</span>
+                  <h3 className="font-display text-lg font-semibold leading-tight">
+                    {drink.name}
+                  </h3>
+                  <span className="text-primary font-bold font-body text-lg ml-2 shrink-0">
+                    {drink.price}
+                  </span>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{drink.description}</p>
+
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  {drink.description}
+                </p>
+
                 <div className="flex items-center justify-between">
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, j) => (
                       <Star key={j} className="w-3.5 h-3.5 fill-primary text-primary" />
                     ))}
                   </div>
+
                   <button className="text-sm font-semibold text-primary hover:underline active:scale-[0.97] transition-all">
                     Try This →
                   </button>
                 </div>
               </div>
+
             </motion.div>
           ))}
         </div>
