@@ -17,7 +17,7 @@ const drinks = [
     price: '$6.50',
     tag: 'New',
     color: 'from-orange-900/40 to-yellow-800/20',
-    img: '/images/frappe-removebg-preview.png',
+    img: '/images/cafe2.webp',
   },
   {
     name: 'Mocha Midnight Swirl',
@@ -25,7 +25,7 @@ const drinks = [
     price: '$6.20',
     tag: 'Popular',
     color: 'from-stone-900/60 to-stone-700/20',
-    img: '/images/coffe-removebg-preview.png',
+    img: '/images/cafe1.jpeg',
   },
   {
     name: 'Vanilla Cold Brew',
@@ -33,7 +33,7 @@ const drinks = [
     price: '$5.50',
     tag: null,
     color: 'from-yellow-900/30 to-amber-800/10',
-    img: '/images/coffe-removebg-preview.png',
+    img: '/images/cafe3.jpeg',
   },
   {
     name: 'Matcha Forest Latte',
@@ -41,15 +41,63 @@ const drinks = [
     price: '$6.00',
     tag: 'Seasonal',
     color: 'from-emerald-900/40 to-green-800/20',
-    img: '/images/coffe-removebg-preview.png',
+    img: '/images/Matcha Forest Latte.jpeg',
   },
+  {
+  name: 'French Matcha Forêt',
+  description: 'Matcha de qualité cérémoniale fouetté avec du lait d’avoine et une touche de miel',
+  price: '6,00 €',
+  tag: 'Saisonnier',
+  color: 'from-emerald-900/40 to-green-800/20',
+  img: '/images/cafeFrench.jpeg',
+},
   {
     name: 'Espresso Tonic',
     description: 'Double shot espresso poured over sparkling tonic water with citrus',
     price: '$5.70',
     tag: null,
     color: 'from-zinc-900/50 to-zinc-700/20',
-    img: '/images/coffe-removebg-preview.png',
+    img: '/images/Espresso_Tonic.webp',
+  },{
+    name: 'La Gabonaise-REGAB',
+    description: 'Canette fraîche de REGAB 60 cl',
+    price: '$5.70',
+    tag: null,
+    color: 'from-zinc-900/50 to-zinc-700/20',
+    img: '/images/regab.jpeg',
+  },
+
+  {
+    name: 'Soda -gazouse',
+    description: 'Canette fraîche de jus 30 cl',
+    price: '$5.70',
+    tag: null,
+    color: 'from-zinc-900/50 to-zinc-700/20',
+    img: '/images/soda.jpeg',
+  },
+  {
+    name: 'Eau minerale',
+    description: 'Eau en bouteille fraîche de jus 1 L, 0.5 L et 30 cl',
+    price: '$5.70',
+    tag: null,
+    color: 'from-zinc-900/50 to-zinc-700/20',
+    img: '/images/eau1.jpeg',
+  },
+  {
+    name: 'Jus de fruits',
+    description: 'Verre de jus de fruits frais et naturel',
+    price: '$5.70',
+    tag: null,
+    color: 'from-zinc-900/50 to-zinc-700/20',
+    img: '/images/fruitJus.jpeg',
+  },
+{
+    name: 'Gateau Exotic',
+    description: 'Tranches de gâteau exotique à base de fruits tropicaux, chocolat, vanille et fraise parfait pour accompagner votre café.',
+    price: '$5.70',
+    tag: null,
+    color: 'from-zinc-900/50 to-zinc-700/20',
+    img: '/images/desert1.webp',
   },
 ];
 
@@ -69,13 +117,13 @@ const MenuSection = () => {
           className="text-center mb-16"
         >
           <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-body">
-            Signature Creations
+            Créations signature
           </p>
           <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">
-            Crafted for You
+            Conçu pour vous
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Each drink is a masterpiece — blending rare origins with innovative techniques.
+            Chaque boisson est un chef-d’œuvre mêlant des origines rares à des techniques innovantes
           </p>
         </motion.div>
 
@@ -146,7 +194,7 @@ const MenuSection = () => {
                   </div>
 
                   <button className="text-sm font-semibold text-primary hover:underline active:scale-[0.97] transition-all">
-                    Try This →
+                    choisir →
                   </button>
                 </div>
               </div>

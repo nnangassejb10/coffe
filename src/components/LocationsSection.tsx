@@ -16,16 +16,16 @@ const locations = [
     phone: '(503) 555-0247',
   },
   {
-    name: 'Velora Waterfront',
-    address: '15 SW Naito Pkwy, Portland, OR 97204',
-    hours: 'Daily 7am–9pm',
-    phone: '(503) 555-0319',
+    name: 'Velora coffe Libreville',
+    address: '15 Bord de mer entrée sabilière, Libreville-Gabon, V - 5',
+    hours: 'Lundi-Dimanche 7H:00–22H:00',
+    phone: '(241) 07-0319XXXX',
   },
   {
-    name: 'Velora Roastery & Lab',
-    address: '1901 NW Industrial Way, Portland, OR 97210',
+    name: 'Velora Roastery la Tunisienne',
+    address: '1901 Aouina, Tunis-Tunisie, OR 97210',
     hours: 'Tours: Sat 10am & 2pm',
-    phone: '(503) 555-0401',
+    phone: '(216) 555-0401',
   },
 ];
 
@@ -42,10 +42,10 @@ const LocationsSection = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
-          <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-body">Find Us</p>
-          <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">Our Locations</h2>
+          <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-body">Trouvez-nous</p>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">Nos Emplacements</h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Four unique spaces, one unwavering commitment to quality.
+            Quatre espaces uniques, un engagement constant envers la qualité.
           </p>
         </motion.div>
 

@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Coffee } from 'lucide-react';
 
 const links = [
-  { label: 'Home', href: '#home' },
+  { label: 'Accueil', href: '#home' },
   { label: 'Menu', href: '#menu' },
-  { label: 'About', href: '#about' },
-  { label: 'Rewards', href: '#rewards' },
-  { label: 'Locations', href: '#locations' },
+  { label: 'À PROPOS', href: '#about' },
+  { label: 'Récompenses', href: '#rewards' },
+  { label: 'Localisations', href: '#locations' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -55,7 +55,7 @@ const Navbar = () => {
             href="#menu"
             className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-200"
           >
-            Order Now
+            Commander maintenant
           </a>
         </div>
 
@@ -95,7 +95,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold mt-2"
               >
-                Order Now
+                Commander maintenant
               </a>
             </div>
           </motion.div>

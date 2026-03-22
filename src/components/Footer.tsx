@@ -8,12 +8,12 @@ const Footer = () => {
           <div className="flex items-center gap-2">
             <Coffee className="w-5 h-5 text-primary" />
             <span className="font-display text-base font-bold tracking-wider">
-              VELORA <span className="text-primary">COFFEE</span>
+              VELORA <span className="text-primary">COFFEE Libreville</span>
             </span>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-            {['Home', 'Menu', 'About', 'Rewards', 'Locations', 'Contact'].map((link) => (
+            {['Accueil', 'Menu', 'À propos', 'Récompenses', 'Localisations', 'Contact'].map((link) => (
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}

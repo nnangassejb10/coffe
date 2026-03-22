@@ -27,56 +27,63 @@ const ContactSection = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
-          <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-body">Get in Touch</p>
-          <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">Say Hello</h2>
+          <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-body">Entrez en contact</p>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">Dites bonjour !</h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Questions, catering requests, or just want to talk coffee? We'd love to hear from you.
+            Des questions, une demande de traiteur, ou simplement envie de parler café ? Nous serions ravis de vous entendre.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-12">
           {/* Form */}
-          <motion.form
-            onSubmit={handleSubmit}
-            initial={{ opacity: 0, x: -24, filter: 'blur(4px)' }}
-            animate={isInView ? { opacity: 1, x: 0, filter: 'blur(0px)' } : {}}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-3 space-y-5"
-          >
-            <div className="grid sm:grid-cols-2 gap-5">
-              <input
-                required
-                type="text"
-                placeholder="Name"
-                className="bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
-              />
-              <input
-                required
-                type="email"
-                placeholder="Email"
-                className="bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
-            />
-            <textarea
-              required
-              rows={5}
-              placeholder="Your message..."
-              className="w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow resize-none"
-            />
-            <button
-              type="submit"
-              disabled={sending}
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3 rounded-full font-semibold text-sm hover:brightness-110 active:scale-[0.97] transition-all duration-200 disabled:opacity-60"
-            >
-              <Send className="w-4 h-4" />
-              {sending ? 'Sending...' : 'Send Message'}
-            </button>
-          </motion.form>
+<motion.form
+  action="https://formspree.io/f/mgonbqkj"
+  method="POST"
+  initial={{ opacity: 0, x: -24, filter: 'blur(4px)' }}
+  animate={isInView ? { opacity: 1, x: 0, filter: 'blur(0px)' } : {}}
+  transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+  className="lg:col-span-3 space-y-5"
+>
+  <div className="grid sm:grid-cols-2 gap-5">
+    <input
+      required
+      type="text"
+      name="name"
+      placeholder="Nom"
+      className="bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
+    />
+    <input
+      required
+      type="email"
+      name="email"
+      placeholder="Email"
+      className="bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
+    />
+  </div>
+
+  <input
+    type="text"
+    name="subject"
+    placeholder="Objet du message"
+    className="w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
+  />
+
+  <textarea
+    required
+    name="message"
+    rows={5}
+    placeholder="Écrire message..."
+    className="w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow resize-none"
+  />
+
+  <button
+    type="submit"
+    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3 rounded-full font-semibold text-sm hover:brightness-110 active:scale-[0.97] transition-all duration-200"
+  >
+    <Send className="w-4 h-4" />
+    Envoyer le message
+  </button>
+</motion.form>
 
           {/* Contact info */}
           <motion.div
@@ -93,7 +100,7 @@ const ContactSection = () => {
               </a>
             </div>
             <div>
-              <h3 className="font-display text-lg font-semibold mb-3">Follow Us</h3>
+              <h3 className="font-display text-lg font-semibold mb-3">Suivez-nous</h3>
               <div className="flex gap-3">
                 <a href="#" className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all active:scale-95">
                   <Instagram className="w-5 h-5" />
@@ -104,11 +111,11 @@ const ContactSection = () => {
               </div>
             </div>
             <div>
-              <h3 className="font-display text-lg font-semibold mb-2">Hours</h3>
+              <h3 className="font-display text-lg font-semibold mb-2">Heures ouvrables</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Mon – Sat: 6:00am – 8:00pm
+                lundi – samedi: 6H:00 – 22H:00
                 <br />
-                Sunday: 7:00am – 6:00pm
+                dimanche: 7H:00 – 18H:00
               </p>
             </div>
           </motion.div>

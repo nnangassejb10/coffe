@@ -5,18 +5,18 @@ import { Leaf, Mountain, HandHeart } from 'lucide-react';
 const values = [
   {
     icon: Leaf,
-    title: 'Ethically Sourced',
-    desc: 'Direct partnerships with farmers in Colombia, Ethiopia, and Guatemala. Fair wages, sustainable practices.',
+    title: 'Approvisionnement éthique',
+    desc: 'Des partenariats directs avec des producteurs en Colombie, Éthiopie et Guatemala. Des rémunérations équitables et des pratiques durables.',
   },
   {
     icon: Mountain,
-    title: 'Small Batch Roasted',
-    desc: 'Every bean is roasted in micro-batches at our atelier, ensuring peak flavor and freshness in every cup.',
+    title: 'Torréfaction en petites quantités',
+    desc: 'Chaque grain est torréfié en micro-lots dans notre atelier, garantissant une saveur optimale et une fraîcheur exceptionnelle dans chaque tasse.',
   },
   {
     icon: HandHeart,
-    title: 'Community First',
-    desc: '3% of every purchase funds clean water projects in the coffee-growing regions we partner with.',
+    title: 'La communauté d’abord',
+    desc: '3 % de chaque achat finance des projets d’accès à l’eau potable dans les régions productrices de café avec lesquelles nous collaborons.',
   },
 ];
 
@@ -34,21 +34,21 @@ const AboutSection = () => {
             animate={isInView ? { opacity: 1, x: 0, filter: 'blur(0px)' } : {}}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-body">Our Story</p>
+            <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-body">Notre histoire</p>
             <h2 className="font-display text-4xl sm:text-5xl font-bold mb-6 leading-[1.1]">
-              Born from a Love
+              Né d’une passion
               <br />
-              of <span className="text-gradient">Craft</span>
+              d' <span className="text-gradient">Artisanat</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Velora Coffee began in 2018 as a small roastery in Portland. We believed great coffee
-              wasn't just about the bean — it was about the journey from soil to sip. Every origin
-              we source, every roast profile we develop, is driven by deep respect for the hands
-              that grew it and the palates that savor it.
+              Velora Coffee a vu le jour en 2018 comme une petite torréfaction à Tunis. Nous croyions que le grand café ne se résumait 
+              pas au grain mais à tout le parcours, de la terre à la tasse. Chaque origine que nous sélectionnons, chaque profil de torréfaction 
+              que nous développons, est guidé par un profond respect pour 
+              les mains qui le cultivent et les palais qui l’apprécient.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Today, with four locations and a dedicated online community, we remain committed to
-              the same vision: extraordinary coffee, made with intention.
+              Aujourd’hui, avec quatre établissements et une communauté en ligne engagée, nous restons fidèles à la même vision : un café d’exception, 
+              préparé avec intention.on.
             </p>
           </motion.div>
 

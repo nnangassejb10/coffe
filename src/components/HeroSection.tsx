@@ -16,7 +16,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4"
         >
-          Premium Artisan Coffee
+         Café artisanal de qualité supérieure
         </motion.p>
 
         <motion.h1
@@ -27,7 +27,7 @@ const HeroSection = () => {
         >
           VELORA
           <br />
-          <span className="text-gradient">COFFEE</span>
+          <span className="text-gradient">COFFEE Libreville</span>
         </motion.h1>
 
         <motion.p
@@ -36,8 +36,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-muted-foreground text-lg sm:text-xl max-w-xl mx-auto mb-10 font-body leading-relaxed"
         >
-          Where every cup tells a story. Ethically sourced, masterfully roasted,
-          crafted with intention.
+          Où chaque tasse raconte une histoire. Approvisionné de manière 
+          éthique, torréfié avec maîtrise, préparé avec intention.
         </motion.p>
 
         <motion.div
@@ -50,13 +50,13 @@ const HeroSection = () => {
             href="#menu"
             className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-semibold text-base hover:brightness-110 active:scale-[0.97] transition-all duration-200 shadow-lg shadow-primary/25"
           >
-            Explore Menu
+            Découvrir le menu
           </a>
           <a
             href="#about"
             className="border border-foreground/20 text-foreground px-8 py-3.5 rounded-full font-semibold text-base hover:bg-foreground/5 active:scale-[0.97] transition-all duration-200"
           >
-            Our Story
+            Notre histoire
           </a>
         </motion.div>
       </div>

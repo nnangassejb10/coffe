@@ -7,7 +7,7 @@ const tiers = [
     icon: Zap,
     name: 'Green',
     points: '0 – 149',
-    perks: ['Free birthday drink', 'Member pricing', 'Early access to seasonal drops'],
+    perks: ['Boisson gratuite pour votre anniversaire', 'Tarifs réservés aux membres', 'Accès anticipé aux offres saisonnières'],
     color: 'border-emerald-600/40',
     iconColor: 'text-emerald-400',
     bg: 'bg-emerald-900/20',
@@ -16,7 +16,7 @@ const tiers = [
     icon: Trophy,
     name: 'Gold',
     points: '150 – 399',
-    perks: ['Everything in Green', 'Free drink every 10 purchases', 'Exclusive merch discounts'],
+    perks: ['Tout ce qui est inclus dans Green', 'Une boisson offerte toutes les 10 commandes', 'Réductions exclusives sur les produits dérivés'],
     color: 'border-amber-500/40',
     iconColor: 'text-amber-400',
     bg: 'bg-amber-900/20',
@@ -25,7 +25,7 @@ const tiers = [
     icon: Crown,
     name: 'Velora Black',
     points: '400+',
-    perks: ['Everything in Gold', 'Free drink weekly', 'Priority service', 'Private tasting events'],
+    perks: ['Tout ce qui est inclus dans Gold', 'Une boisson offerte chaque semaine', 'Service prioritaire', 'Événements de dégustation privés'],
     color: 'border-foreground/20',
     iconColor: 'text-foreground',
     bg: 'bg-foreground/5',
@@ -47,13 +47,13 @@ const RewardsSection = () => {
         >
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-4">
             <Gift className="w-4 h-4" />
-            Rewards Program
+            Programme de fidélité
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">
-            Sip More, Earn More
+            Savourez davantage, gagnez davantage
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Every purchase earns you points. Unlock tiers, earn perks, and get closer to your perfect cup — on us.
+            Chaque achat vous permet de gagner des points. Débloquez les niveaux, gagnez des avantages et approchez-vous de votre tasse parfaite gratuitement.
           </p>
         </motion.div>
 
