@@ -38,3 +38,8 @@ Mise en place de l’architecture du projet
 Personnalisation de l’interface (images, styles, favicon)
 Intégration de fonctionnalités visuelles avancées (3D)
 Adaptation du template initial à un cas concret (Velora Coffee)
+
+## 🔗 Démo en ligne
+
+Vous pouvez accéder à l'application ici :
+👉 [https://ton-lien.com](https://coffelbv.vercel.app/)
